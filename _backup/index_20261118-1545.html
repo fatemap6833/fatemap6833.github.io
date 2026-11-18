@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>실습 자료 모음</title>
+<style>
+  :root {
+    --bg: #f5f6fa;
+    --card-bg: #ffffff;
+    --text: #1f2430;
+    --sub: #6b7280;
+    --accent: #4f46e5;
+    --border: #e5e7eb;
+    --badge-bg: #eef2ff;
+    --badge-text: #4f46e5;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI", "Pretendard", "Apple SD Gothic Neo", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 40px 20px 80px;
+  }
+  header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 48px;
+  }
+  header h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+  header p {
+    color: var(--sub);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  @media (max-width: 860px) {
+    .grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 560px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--text);
+    cursor: default;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  }
+  a.card {
+    cursor: pointer;
+  }
+  .card .icon {
+    font-size: 30px;
+  }
+  .card h2 {
+    font-size: 17px;
+    margin: 0;
+  }
+  .card p {
+    font-size: 13px;
+    color: var(--sub);
+    margin: 0;
+    line-height: 1.5;
+  }
+  .badge {
+    align-self: flex-start;
+    font-size: 12px;
+    background: var(--badge-bg);
+    color: var(--badge-text);
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-weight: 600;
+  }
+  .badge.ready {
+    background: #dcfce7;
+    color: #16a34a;
+  }
+  footer {
+    text-align: center;
+    margin-top: 60px;
+    color: var(--sub);
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>실습 자료 모음</h1>
+  <p>클로드 코드로 만든 실습 프로젝트들을 모아두는 공간입니다.<br>
+  아래 카드들은 각 프로젝트가 완성되면 해당 깃허브 페이지로 연결될 자리입니다.</p>
+</header>
+
+<div class="grid">
+
+  <a class="card" href="https://fatemap6833.github.io/todo-list/">
+    <div class="icon">📝</div>
+    <h2>할일 목록 리스트</h2>
+    <p>해야 할 일을 추가하고 관리하는 간단한 투두리스트</p>
+    <span class="badge ready">바로가기</span>
+  </a>
+
+  <div class="card">
+    <div class="icon">🐍</div>
+    <h2>클로드 활용 스네이크 게임</h2>
+    <p>클로드 코드로 만들어본 스네이크 게임</p>
+    <span class="badge">준비중</span>
+  </div>
+
+  <div class="card">
+    <div class="icon">👤</div>
+    <h2>개인 프로파일</h2>
+    <p>소개와 경력을 보여주는 개인 프로필 페이지</p>
+    <span class="badge">준비중</span>
+  </div>
+
+  <div class="card">
+    <div class="icon">📈</div>
+    <h2>주식 일기</h2>
+    <p>주식 매매와 생각을 기록하는 일기 페이지</p>
+    <span class="badge">준비중</span>
+  </div>
+
+  <div class="card">
+    <div class="icon">🦾</div>
+    <h2>4축 로봇암 시뮬레이터</h2>
+    <p>4축 로봇팔의 움직임을 화면에서 시뮬레이션</p>
+    <span class="badge">준비중</span>
+  </div>
+
+  <div class="card">
+    <div class="icon">📚</div>
+    <h2>이북(ebook) 쇼핑몰</h2>
+    <p>전자책을 둘러보고 구매하는 쇼핑몰 페이지</p>
+    <span class="badge">준비중</span>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 fatemap6833 · 실습 자료 모음
+</footer>
+
+</body>
+</html>
